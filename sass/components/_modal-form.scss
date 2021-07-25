@@ -30,6 +30,11 @@
     border-radius: 4px;
     padding-left: 42px;
     transition: border-color 250ms var(--timing-function);
+    
+    &:focus{
+    outline: none;
+    border-color: var(--accent-color);
+    }
 }
 .modal-form-icon{
     position: absolute;
@@ -37,16 +42,13 @@
     transform: translateY(-50%);
     left: 12px;
     transition: fill 250ms var(--timing-function);
-}
-
-.modal-form-input:focus{
-    outline: none;
-    border-color: var(--accent-color);
-}
-
-.modal-form-input:focus + .modal-form-icon{
+    
+    .modal-form-input:focus + &{
     fill: var(--accent-color);
+    }
 }
+
+
 .user-message-area{
     width: 100%;
     height: 120px;
@@ -56,19 +58,19 @@
     padding: 12px 16px;
     resize: none;
     transition: border-color 250ms var(--timing-function);
-}
 
-.user-message-area::placeholder{
+    &::placeholder{
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
-}
-
-.user-message-area:focus{
+    }
+    &:focus{
     outline: none;
     border-color: var(--accent-color);
+    }
 }
+
 .modal-form-checkbox-label{
     display: flex;
     justify-content: center;
@@ -77,8 +79,8 @@
     letter-spacing: 0.03em;
     color: var(--secondary-color);
     margin-bottom: 30px;
-}
-.modal-form-checkbox-label::before{
+
+    &::before{
     display: block;
     content: "";
     width: 16px;
@@ -88,16 +90,19 @@
     cursor: pointer;
     margin-right: 8px;
     transition: border 250ms var(--timing-function);
-}
+    }
 
-.modal-form-checkbox:checked + .modal-form-checkbox-label::before{
+    .modal-form-checkbox:checked + &::before{
     background-image: url("../images/icon_check.svg");
     background-size: contain;
     border: none;
-}
-.modal-form-checkbox:focus + .modal-form-checkbox-label::before{
+    }
+
+    .modal-form-checkbox:focus + &::before{
     border: 1px solid var(--accent-color);
+    }
 }
+
 .checkbox-link{
     font-family: inherit;
     font-size: inherit;
@@ -124,8 +129,9 @@
     cursor: pointer;
     margin: 0 auto;
     transition: background-color 250ms var(--timing-function);
-}
-.modal-form-btn:hover,
-.modal-form-btn:focus{
+
+    &:hover,
+    &:focus{
     background-color: #188CE8;
+    }
 }

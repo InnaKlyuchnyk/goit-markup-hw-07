@@ -4,13 +4,15 @@
 .advantages {
     display: flex;
 }
-.advantages-list{
+.advantages__item{
     flex-basis: calc((100% - 90px) / 4);
-}
-.advantages-list:not(:last-child){
+
+    &:not(:last-child){
     margin-right: 30px;
+    }
 }
-.adv-list-icon{
+
+.advantages__icon{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,13 +23,13 @@
     margin-bottom: 30px;
 }
 
-.advantages-title {
+.advantages__title {
 font-weight: 700;
 line-height: 1.14;
 text-transform: uppercase;
 margin-bottom: 10px;
 }
-.advantages-text {
+.advantages__text {
 line-height: 1.71;
 color: var(--secondary-color);
 

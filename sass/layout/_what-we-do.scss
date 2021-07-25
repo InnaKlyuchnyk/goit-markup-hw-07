@@ -3,14 +3,14 @@
     margin-left: -30px;
     margin-top: -30px;
 }
-.what-we-do-item{
+.what-we-do-list__item{
     position: relative;
     flex-basis: calc((100% - 90px) / 3);
     margin-left: 30px;
     margin-top: 30px;
     
 }
-.what-we-do-description{
+.what-we-do-list__description{
     position: absolute;
     bottom: 0;
     text-align: center;

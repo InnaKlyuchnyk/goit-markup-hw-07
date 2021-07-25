@@ -34,8 +34,9 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: fill 250ms var(--timing-function);
-}
-.close-button:hover,
-.close-button:focus{
+
+    &:hover,
+    &:focus{
     fill: var(--accent-color);
+    }
 }

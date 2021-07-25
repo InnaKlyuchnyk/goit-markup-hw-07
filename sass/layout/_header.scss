@@ -25,35 +25,12 @@
     
 }
 
-.site-nav-list:not(:last-child) {
+.site-nav__item{
+    &:not(:last-child) {
     margin-right: 50px;
-}
+    }
 
-.site-nav-link,
-.mail-tel-link {
-font-weight: 500;
-line-height: 1.14;
-letter-spacing: 0.02em;
-
-color: var(--main-color);
-transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
-
-}
-
-.site-nav-link:hover,
-.site-nav-link:focus,
-.mail-tel-link:hover,
-.mail-tel-link:focus {
-    color: var(--accent-color);
-    fill: var(--accent-color);
-    
-}
-.site-nav-link.current {
-    position: relative;
-    color: var(--accent-color);
-}
-
-.site-nav-list .current::after{
+    & .current::after{
     position: absolute;
     bottom: -33px;
     content: "";
@@ -62,23 +39,62 @@ transition: color 250ms var(--timing-function), fill 250ms var(--timing-function
     height: 4px;
     border-radius: 2px;
     background-color: var(--accent-color);  
+    }
+}
+
+.site-nav__link{
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    color: var(--main-color);
+    transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+    }
+
+    &.current {
+    position: relative;
+    color: var(--accent-color);
+    }
+}
+    .mail-tel__link {
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    color: var(--main-color);
+    transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+    }
+
 }
 
 .mail-tel{
- margin-left: auto; 
+     margin-left: auto; 
 }
-.mail-tel-list:not(:last-child){
+.mail-tel__item{
+    &:not(:last-child){
     margin-right: 30px;
+    }
 }
-.mail-tel-link { 
+
+.mail-tel__link { 
     display: flex;
     justify-content: center;
     align-items: center;
 color: var(--secondary-color);
 }
 
-.icon-mail,
-.icon-tel{
+.mail-tel__icon-mail,
+.mail-tel__icon-tel{
     fill: currentColor;
     margin-right: 10px;
 }

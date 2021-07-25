@@ -14,25 +14,33 @@ font-family: var(--main-font);
 font-style: normal;
 line-height: 1.71;
 }
-.address-list:not(:last-child){
+.address__item{
+    &:not(:last-child){
     margin-bottom: 9px;
+    }
 }
-.address-link {
+
+.address__link {
     color: var(--main-light-color);
     transition: color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus{
+    color: var(--accent-color);
+    }
 }
 
-.address-mail-tel {
+.address__mail-tel {
     color: var(--footer-mail-color);
     transition: color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus{
+    color: var(--accent-color);
+    }
 }
 
-.address-link:hover,
-.address-link:focus,
-.address-mail-tel:hover,
-.address-mail-tel:focus{
-    color: var(--accent-color);
-}
+
 .footer-container{
     display: flex;
     align-items: baseline;
@@ -53,7 +61,7 @@ color: var(--main-light-color);
     display: flex;
     justify-content: space-between;
 }
-.footer-link{
+.footer-social-list__link{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,11 +71,13 @@ color: var(--main-light-color);
     border-radius: 50%;
 
     transition: background-color 250ms var(--timing-function);
-}
-.footer-link:hover,
-.footer-link:focus{
+
+    &:hover,
+    &:focus{
     background-color: var(--accent-color);
+    }
 }
+
 .footer-social-icon{
     fill: var(--main-light-color);
 }
@@ -80,11 +90,11 @@ color: var(--main-light-color);
 .footer-form{
     display: flex;
 }
-.footer-form-field{
+.footer-form__field{
     margin-right: 12px;
 }
 
-.footer-form-input{
+.footer-form__input{
     width: 358px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -94,16 +104,17 @@ color: var(--main-light-color);
     padding: 15px 16px;
     color: var(--main-light-color);
 
-}
-.footer-form-input::placeholder{
+    &::placeholder{
     font-family: inherit;
-font-size: 16px;
-line-height: 1.25;
-letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    }
+
 }
 
-.footer-form-btn{
+.footer-form__btn{
     position: relative;
     font-family: inherit;
     font-weight: 700;
@@ -120,6 +131,11 @@ color: rgba(255, 255, 255, 0.6);
     background-color: var(--accent-color);
     transition: background-color 250ms var(--timing-function);
     cursor: pointer;
+
+    &:hover,
+    &:focus{
+    background-color: #188CE8;
+    }
 }
 .footer-btn-icon{
     position: absolute;
@@ -127,7 +143,3 @@ color: rgba(255, 255, 255, 0.6);
     right: 28px;
 }
 
-.footer-form-btn:hover,
-.footer-form-btn:focus{
-    background-color: #188CE8;
-}
